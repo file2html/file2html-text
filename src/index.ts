@@ -1,5 +1,5 @@
 import * as file2html from 'file2html';
-import bytesToString from 'file2html/lib/bytes-to-string';
+import {decode} from 'file2html/lib/text-encoding';
 
 const supportedMimeTypes: string[] = ['text/plain'];
 
@@ -19,7 +19,7 @@ export default class TextReader extends file2html.Reader {
                 modifiedAt: ''
             }, fileInfo.meta),
             styles: '<style></style>',
-            content: `<div>${ bytesToString(content) }</div>`
+            content: `<div>${ decode(content) }</div>`
         }));
     }
 

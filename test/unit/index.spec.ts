@@ -1,8 +1,13 @@
 import * as fs from 'fs';
 import * as path from 'path';
+import {TextDecoder} from 'text-encoding';
 import TextReader from '../../src/index';
 
 describe('Text', () => {
+    beforeAll(() => {
+        (window as any).TextDecoder = TextDecoder;
+    });
+
     describe('#read()', () => {
         let reader: TextReader;
 

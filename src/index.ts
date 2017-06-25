@@ -1,7 +1,8 @@
 import * as file2html from 'file2html';
 import {decode} from 'file2html/lib/text-encoding';
+import * as mime from 'file2html/lib/mime';
 
-const supportedMimeTypes: string[] = ['text/plain'];
+const supportedMimeTypes: string[] = [mime.lookup('.txt')];
 
 export default class TextReader extends file2html.Reader {
     read ({fileInfo}: file2html.ReaderParams) {

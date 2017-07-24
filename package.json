@@ -4,16 +4,20 @@
   "description": "Text engine for file2html",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "files": [
+    "lib/*.*",
+    "lib/**/*.*"
+  ],
   "scripts": {
     "test": "./node_modules/.bin/jest --no-cache --config=./node_modules/file2html-dev-tools/jest/config.json",
     "lint": "./node_modules/.bin/tslint \"src/**/*.ts\" \"test/unit/**/*.ts\"",
     "build": "npm run lint && rm -rf lib && ./node_modules/.bin/tsc"
   },
   "dependencies": {
-    "file2html": "git@github.com:file2html/file2html.git"
+    "file2html": "^0.1.5"
   },
   "devDependencies": {
-    "file2html-dev-tools": "git@github.com:file2html/file2html-dev-tools.git"
+    "file2html-dev-tools": "git+https://github.com/file2html/file2html-dev-tools.git#v1.0.0"
   },
   "repository": {
     "type": "git",

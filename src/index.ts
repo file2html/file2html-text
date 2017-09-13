@@ -20,7 +20,7 @@ export default class TextReader extends file2html.Reader {
                 modifiedAt: ''
             }, fileInfo.meta),
             styles: '<style></style>',
-            content: `<div>${ decode(content) }</div>`
+            content: `<div><pre>${ decode(content) }</pre></div>`
         }));
     }
 

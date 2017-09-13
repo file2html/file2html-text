@@ -34,7 +34,7 @@ describe('Text', () => {
 
                 expect(styles).toBe('<style></style>');
                 expect(content).toBe(
-                    '<div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>'
+                    '<div><pre>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</pre></div>'
                 );
             });
         });
